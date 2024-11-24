@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Project Name</title>
+    <title>Simple Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Project</h1>
-        <p>This is a description of your project.</p>
-    </header>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
+        <input type="text" id="display" disabled placeholder="0" />
+        
+        <div class="buttons">
+            <button class="button" onclick="appendNumber(7)">7</button>
+            <button class="button" onclick="appendNumber(8)">8</button>
+            <button class="button" onclick="appendNumber(9)">9</button>
+            <button class="button operator" onclick="setOperation('+')">+</button>
 
-    <main>
-        <section id="info-section">
-            <h2>Project Info</h2>
-            <p>This project does X, Y, and Z. Here's some more information about it.</p>
-            <button id="info-button">Click Me</button>
-        </section>
-    </main>
+            <button class="button" onclick="appendNumber(4)">4</button>
+            <button class="button" onclick="appendNumber(5)">5</button>
+            <button class="button" onclick="appendNumber(6)">6</button>
+            <button class="button operator" onclick="setOperation('-')">-</button>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+            <button class="button" onclick="appendNumber(1)">1</button>
+            <button class="button" onclick="appendNumber(2)">2</button>
+            <button class="button" onclick="appendNumber(3)">3</button>
+            <button class="button operator" onclick="setOperation('*')">*</button>
+
+            <button class="button" onclick="appendNumber(0)">0</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="calculateResult()">=</button>
+            <button class="button operator" onclick="setOperation('/')">/</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
